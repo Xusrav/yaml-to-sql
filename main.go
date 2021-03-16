@@ -28,7 +28,7 @@ func yaml2Sql(yamlFile string) {
 		return
 	}
 
-	sqlFile, err := os.Create("taUpdate.sql")
+	sqlFile, err := os.Create("sql.sql")
 	if err != nil {
 		log.Print(err)
 		return
