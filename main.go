@@ -13,6 +13,7 @@ func main() {
 }
 
 func yaml2Sql(yamlFile string) {
+
 	var receiveYamlDatas map[string]string
 
 	data, err := ioutil.ReadFile(yamlFile)
@@ -34,7 +35,7 @@ func yaml2Sql(yamlFile string) {
 	}
 
 	for key, value := range receiveYamlDatas {
-		query := fmt.Sprintf(`UPDATE translations set value = value || '{"ta": "%s"}' where key = '%s';%s`, value, key, "\n")
+		query := fmt.Sprintf(`UPDATE blablabla set value = value || '{"ta": "%s"}' where key = '%s';%s`, value, key, "\n")
 		n, err := sqlFile.WriteString(query)
 		if err != nil {
 			log.Print(err)
